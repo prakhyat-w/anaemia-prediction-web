@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 def fetch_message():
-    url = 'http://127.0.0.1:5000/'
+    url = 'https://anaemia-prediction.onrender.com/'
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
@@ -52,7 +52,7 @@ def main():
         submit = st.form_submit_button('Predict')
         if submit:
             user_data = {'red':red,'green': green,'blue': blue,'hb':hb,'M':M}
-            url = 'http://127.0.0.1:5000/predict/'
+            url = 'https://anaemia-prediction.onrender.com/predict/'
             response = requests.post(url,json= user_data)
             print(response.status_code)
 

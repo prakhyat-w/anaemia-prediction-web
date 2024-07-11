@@ -10,7 +10,7 @@ def fetch_message():
     else:
         return None
 
-def main():
+def app():
     
     st.set_page_config(page_title='Anaemia Prediction')
     page_bg_img = '''
@@ -67,4 +67,4 @@ def main():
                 st.error('Error submitting data')
 
 if __name__ == '__main__':
-    main()    
+    app()    
